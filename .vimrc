@@ -1,6 +1,11 @@
 set number
 set nocompatible
 set hidden
+set history=200
+
+" Autocomplete suggestions
+set wildmenu
+set wildmode=full
 
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 
@@ -26,3 +31,7 @@ nnoremap <silent> <Leader>h/ :History/<CR>
 
 " While in insert mode, map jj to be an escape 
 imap jj <Esc>
+
+" When using C-d or C-u, move content to the center
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
